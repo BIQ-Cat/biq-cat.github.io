@@ -1,0 +1,28 @@
+@use 'sass:color' as color;
+
+
+[data-theme="light"] {
+  --bg-color: #dadada;
+  --text-color: #000;
+  --nav-color: #aaa;
+  --nav-text-color: #000;
+  --nav-button-color: #999;
+  --nav-hover-color: #888;
+  --primary-color: #7D4B83;
+  --accent-color: #835486;
+  --switch-checked-bg-color: #DEFF5E;
+  --banner-gradient: linear-gradient(to bottom right, var(--primary-color), var(--switch-checked-bg-color), var(--accent-color));
+}
+
+[data-theme="dark"] {
+  --bg-color: #333;
+  --text-color: #fff;
+  --nav-color: #666;
+  --nav-text-color: #fff;
+  --nav-button-color: #777;
+  --nav-hover-color: #888;
+  --primary-color: #3ECEBD;
+  --accent-color: #DEFF5E;
+  --switch-checked-bg-color: #392D36;
+  --banner-gradient: linear-gradient(to bottom right, var(--switch-checked-bg-color), var(--primary-color), var(--accent-color));
+}

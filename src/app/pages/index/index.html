@@ -1,0 +1,41 @@
+<div
+  class="banner"
+  (mousemove)="paralaxOnMouseMove($event)"
+  style="background-position: {{ bgMoveX() }}% {{ bgMoveY() }}%;"
+>
+  <hgroup>
+    <h1 style="transform: translateX({{ h1X() }}%) translateY({{ h1Y() }}%);">
+      <span class="accent">B</span>IQ-Cat
+    </h1>
+    <h2 style="transform: translateX({{ h2X() }}%) translateY({{ h2Y() }}%);">
+      <span class="accent">I</span>s <span class="accent">Q</span>uite
+      <span class="accent">C</span>ool &amp; <span class="accent">A</span>wesome
+      <span class="accent">T</span>oolkit
+    </h2>
+  </hgroup>
+</div>
+<section class="projects">
+  <aside #dow class="dow-map-viewer">
+    <h1 routerLink="/dow-map-viewer">DoW Map Viewer</h1>
+    <img src="/dmv.png" alt="DoW Map Viewer" />
+    <p>
+      The DoW Map Viewer is a tool for visualizing maps from Dawn of War. It does not require a game
+      to function and can be loaded directly from the browser.
+    </p>
+    <a routerLink="/dow-map-viewer">Learn More</a>
+  </aside>
+  <aside #easyserver class="easyserver">
+    <h1 routerLink="/easyserver">EasyServer (WIP)</h1>
+    <img src="/es.png" alt="EasyServer" />
+    <p>
+      The EasyServer is a back-end web framework that was created with multilinguage support in
+      mind. Right now it supports Python, C++ and Go. However, it is still under development.
+    </p>
+    <a routerLink="/easyserver">Learn More</a>
+  </aside>
+</section>
+<div class="more">
+  <h1 routerLink="/projects">Other Projects</h1>
+  <h2>We have {{ repositoriesCount() }} other open source projects that you can check out here!</h2>
+  <a routerLink="/projects">Go to the Projects page</a>
+</div>

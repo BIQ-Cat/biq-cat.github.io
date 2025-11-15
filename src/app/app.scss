@@ -1,0 +1,67 @@
+@use 'themes' as *;
+@use 'dimens' as *;
+
+header {
+  background-color: var(--nav-color);
+  color: var(--nav-text-color);
+  padding: 1rem;
+  overflow: auto;
+  font-weight: bold;
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+  }
+
+  h1 {
+    margin: 0;
+    float: left;
+    color: var(--accent-color);
+    font-family: 'Lato', sans-serif;
+  }
+
+  nav {
+    float: right;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 1rem;
+        cursor: pointer;
+
+        // Button-like appearance
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        background: var(--nav-button-color);
+        transition: background-color 0.3s ease;
+      }
+
+      li:hover {
+        background: var(--nav-hover-color);
+      }
+    }
+  }
+
+  label {
+    float: right;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span {
+      margin-right: 0.5rem;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 1.2rem;
+    }
+  }
+}

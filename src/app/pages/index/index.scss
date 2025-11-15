@@ -1,0 +1,141 @@
+@use 'themes' as *;
+@use 'dimens' as *;
+
+@mixin card {
+  max-width: 49%;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+
+  &.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border-color: var(--accent-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.5em;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  h1 {
+    font-size: 2em;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    color: var(--accent-color);
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  p {
+    margin: 1em 0;
+  }
+}
+
+span.accent {
+  color: var(--accent-color);
+}
+
+hgroup {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    position: relative;
+    font-size: 6em;
+    font-style: italic;
+  }
+  h2 {
+    position: relative;
+    font-size: 2em;
+  }
+}
+
+.banner {
+  background: var(--banner-gradient);
+  background-size: cover;
+}
+
+.projects {
+  overflow: hidden;
+  padding: 0 2em;
+  .easyserver {
+    @include card;
+    float: left;
+    transform: translateX(-100vw);
+  }
+
+  .dow-map-viewer {
+    @include card;
+    float: right;
+    transform: translateX(100vw);
+  }
+}
+
+.more {
+  text-align: center;
+
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in;
+    font-size: 1.2em;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  padding: 1em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--primary-color);
+  border-radius: 0.5em;
+
+  margin: 1em;
+
+  h1 {
+    marber-bottom: 0.5em;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--accent-color);
+  }
+}
