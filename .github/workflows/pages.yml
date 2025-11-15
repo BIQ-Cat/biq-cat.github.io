@@ -16,7 +16,9 @@ jobs:
       - name: Set up NodeJS
         uses: actions/setup-node@v6.0.0
       - name: Build for deploying
-        run: npm run-script deploy
+        run: |
+          npm install
+          npm run-script deploy
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5.0.0
         with:
