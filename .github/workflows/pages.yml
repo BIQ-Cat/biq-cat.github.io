@@ -1,0 +1,30 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+      - release/*
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Set up NodeJS
+        uses: actions/setup-node@v6.0.0
+      - name: Build for deploying
+        run: npm run-script deploy
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} 
+          enablement: true
+      - name: Deploy the generated website
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/biq-cat-website/browser
+      
