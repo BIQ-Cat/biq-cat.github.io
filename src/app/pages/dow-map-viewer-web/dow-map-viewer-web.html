@@ -1,1 +1,56 @@
-<p>dow-map-viewer-web works!</p>
+<h1>Dawn of War Map Viewer</h1>
+
+<section class="compatiblity">
+  <h3>Supports:</h3>
+  <ul>
+    <li class="yes">Web</li>
+    <li class="no">Desktop platforms (Windows, Linux, MacOS)</li>
+    <li class="yes">Android</li>
+    <li class="no">iOS</li>
+  </ul>
+</section>
+<p>
+  Dow Map Viewer is a tool for visualizing maps from Dawn of War. It uses reverse-engineered data
+  from the game, so it does not require original game to function. This application simplifies the
+  process of designing strategies for Dawn of War: in original game, the process of viewing a map
+  outside of a battle is quite time-consuming and complicated. Dow Map Viewer makes the process of
+  designing strategies for Dawn of War much easier, which can help both new and experienced players.
+  <br />
+  The engine is written in Go and compiled to WebAssembly. It uses voxel graphics to render the map
+  because it is fast and simple. All information about the map is parsed from the game's files, but
+  you will have to upload the map files yourself. There are two popular built-in maps you can use,
+  though.
+  <br />
+  The source code is available on GitHub:
+  <a href="https://github.com/biq-cat/dow-map-viewer-web" target="_blank"
+    >https://github.com/biq-cat/dow-map-viewer-web</a
+  >
+</p>
+
+<h1>Web version</h1>
+<p>
+  The web version is the main version of the application. It is available at
+  <a href="https://dowenthusiastic.pythonanywhere.com" target="_blank"
+    >https://dowenthusiastic.pythonanywhere.com</a
+  >. It works both on mobile and on desktop.<br /><br />
+  Also, you can test it right here:
+</p>
+<iframe
+  #iframe
+  src="https://dowenthusiastic.pythonanywhere.com"
+  width="100%"
+  height="600px"
+></iframe>
+<h1>Prototype</h1>
+<p>
+  The prototype contains the earlier version of the application. It does not support fetures like
+  passability visualization and uses Unity to render the map. <br />
+  <br />
+  If you are interested in the prototype, you can find it on GitHub:
+  <a href="https://github.com/biq-cat/dow-map-viewer" target="_blank"
+    >https://github.com/biq-cat/dow-map-viewer</a
+  >
+</p>
+
+<h1>Gallery</h1>
+<app-gallery></app-gallery>

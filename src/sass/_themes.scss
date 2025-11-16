@@ -11,6 +11,8 @@
   --primary-color: #7D4B83;
   --accent-color: #CC2844;
   --switch-checked-bg-color: #DEFF5E;
+  --yes-color: #3f8c41;
+  --no-color: #981313;
   --banner-gradient: linear-gradient(to bottom right, var(--primary-color), var(--switch-checked-bg-color), var(--accent-color));
 }
 
@@ -24,5 +26,7 @@
   --primary-color: #3ECEBD;
   --accent-color: #DEFF5E;
   --switch-checked-bg-color: #392D36;
+  --yes-color: #28fc70;
+  --no-color: #ea3959;
   --banner-gradient: linear-gradient(to bottom right, var(--switch-checked-bg-color), var(--primary-color), var(--accent-color));
 }

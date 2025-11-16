@@ -5,6 +5,7 @@
   max-width: 49%;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   opacity: 0;
+  height: 100%;
 
   &.visible {
     transform: translateX(0);
@@ -73,6 +74,7 @@ hgroup {
     font-size: 6em;
     font-style: italic;
   }
+
   h2 {
     position: relative;
     font-size: 2em;
@@ -87,6 +89,7 @@ hgroup {
 .projects {
   overflow: hidden;
   padding: 0 2em;
+
   .easyserver {
     @include card;
     float: left;
@@ -123,7 +126,7 @@ hgroup {
   margin: 1em;
 
   h1 {
-    marber-bottom: 0.5em;
+    margin-bottom: 0.5em;
     font-size: 2em;
     cursor: pointer;
     transition: color 0.5s ease-in;

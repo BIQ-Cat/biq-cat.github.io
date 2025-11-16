@@ -1,0 +1,53 @@
+@use 'themes' as *;
+
+
+iframe {
+  width: 80vw;
+  height: 80vh;
+  margin: 2% auto;
+  display: block;
+}
+
+.compatiblity {
+  margin-left: 1%;
+  margin-bottom: 2%;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.5em;
+  padding: 1em;
+  max-width: 60%;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10%;
+
+    li {
+      &.yes {
+        color: var(--yes-color);
+
+        &:before {
+          content: '✓';
+          margin-right: 0.5em;
+        }
+      }
+
+      &.no {
+        color: var(--no-color);
+
+        &:before {
+          content: '✗';
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+p {
+  margin-bottom: 2%;
+  padding: 1em;
+}
+
+h1 {
+  color: var(--primary-color);
+}
