@@ -1,1 +1,22 @@
-<p>single-project works!</p>
+@if (project().abandoned) {
+  <div class="error">
+    <h2>This project is no longer maintained</h2>
+    <p>
+      If you are interested in our code or ideas, you are free to
+      <a href="project().html_url">fork</a> and improve it
+    </p>
+  </div>
+}
+@if (project().alpha) {
+  <div class="error">
+    <h2>This project is work in progress</h2>
+    <p>
+      This tool is still very unstable. You can get involved if you wish. The source is available on
+      <a href="project().html_url">GitHub</a>
+    </p>
+  </div>
+}
+<h1>{{ project().name }} - project page</h1>
+<img [src]="gitHubService.blobUrl(project().image)" alt="{{ project().name }}" />
+<p [innerHTML]="project().readme"></p>
+<p class="links">Source: <a href="project().html_url">GitHub</a></p>

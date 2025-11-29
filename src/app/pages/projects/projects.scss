@@ -1,0 +1,35 @@
+@use 'themes' as *;
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2%;
+
+  .project {
+    width: 48%;
+    margin-bottom: 20px;
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    img {
+      max-width: 40%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .links {
+      align-self: flex-end;
+    }
+
+  }
+}

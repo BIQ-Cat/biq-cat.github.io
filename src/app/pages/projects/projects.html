@@ -1,1 +1,17 @@
-<p>projects works!</p>
+<h1>Projects</h1>
+<div class="projects">
+  @for (project of projects(); track project.full_name) {
+    <div class="project">
+      <h2>{{ project.name }}</h2>
+      <img
+        [src]="gitHubService.blobUrl(project.image)"
+        alt="{{ project.name }}"
+      />
+      <p>{{ project.description }}</p>
+      <div class="links">
+        <a href="{{ '/projects/' + project.name }}">View Project</a><br /><br />
+        <a href="{{ project.html_url }}" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  }
+</div>

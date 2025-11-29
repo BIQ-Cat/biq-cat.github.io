@@ -1,0 +1,27 @@
+@use 'themes' as *;
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+p {
+  padding: 2%;
+}
+
+.error {
+  background-color: var(--warning-color);
+  padding: 2%;
+  border-radius: 5px;
+  margin: 2%;
+  text-align: center;
+  color: black;
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}

@@ -24,7 +24,7 @@ export const routes: Routes = [
     component: EasyServer
   },
   {
-    path: 'projects/:id',
+    path: 'projects/:name',
     component: SingleProject
   },
   {
